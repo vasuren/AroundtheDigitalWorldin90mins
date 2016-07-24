@@ -1,0 +1,9 @@
+---
+applications:
+- name: Flask-weather-app
+  buildpack: python_buildpack
+  disk_quota: 500MB
+  random-route: true
+  command: python main.py -p $PORT
+  memory: 1G
+  stack: cflinuxfs2

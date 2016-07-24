@@ -1,8 +1,10 @@
 from flask import Flask, render_template
 from gateway import Gateway
-
+import os
 
 app = Flask(__name__)
+port = int(os.getenv("PORT"))
+
 
 @app.route('/')
 def home():
@@ -13,5 +15,4 @@ def home():
 
 
 if __name__ == '__main__':
-    app.debug = False
-    app.run(host = '0.0.0.0', debug = False)
+    app.run(host = '0.0.0.0', port = port)
