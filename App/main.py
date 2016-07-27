@@ -1,7 +1,6 @@
 from flask import Flask, render_template
 from gateway import Gateway
 import os
-#import json
 
 app = Flask(__name__)
 port = int(os.getenv("PORT"))
